@@ -1,4 +1,4 @@
-{%extends 'main.html' %}
+{% extends 'main.html' %}
 
 {% block content %}
 
@@ -9,6 +9,7 @@
         {% for room in rooms %}
         <div>
             <a href ="{% url 'update-room' room.id %}">Edit</a>
+            <a href ="{% url 'delete-room' room.id %}">Delete</a>
 
             <!-- <h5>{{room.id}} -- <a href="/room/{{room.id}}">{{room.name}}</a></h5> -->
             <span>@{{room.host.username}}</span>
